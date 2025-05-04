@@ -1,9 +1,27 @@
 import React from 'react'
+import LoginForm from '../Components/LoginForm'
+import LoginMethods from '../Components/LoginMethods'
+import AuthRoute from '../Components/AuthRoute'
 
 const Login = () => {
-  return (
-    <div>Login</div>
-  )
+    return (
+        <AuthRoute>
+            <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-500 to-pink-500 p-4">
+                <div className="bg-white p-8 rounded-lg shadow-xl w-full max-w-md">
+                    <LoginForm />
+                    <div className="relative my-3">
+                        <div className="absolute inset-0 flex items-center">
+                            <div className="w-full border-t border-gray-300"></div>
+                        </div>
+                        <div className="relative flex justify-center text-sm">
+                            <span className="px-2 bg-white text-gray-500">OR</span>
+                        </div>
+                    </div>
+                    <LoginMethods />
+                </div>
+            </div>
+        </AuthRoute>
+    )
 }
 
 export default Login
