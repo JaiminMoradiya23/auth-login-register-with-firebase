@@ -63,6 +63,7 @@ const SignupForm = () => {
 
     const handleSignup = async (data) => {
         try {
+            console.log(data, 'data')
             await toast.promise(
                 signUpWithEmailAndPassword(data.email, data.password),
                 {
@@ -70,7 +71,8 @@ const SignupForm = () => {
                     success: "Successfully signed up!",
                     error: (err) => err.message.includes('auth/email-already-in-use') ? "Email is already in use" : err.message
                 }
-            );
+            ); 
+            router.push("/")
         } catch (err) {
             console.error(err)
         }
@@ -80,8 +82,6 @@ const SignupForm = () => {
         setIsLoading(true)
         try {
             await handleSignup(data);
-            router.push("/")
-
         } catch (error) {
             console.error(error)
         } finally {

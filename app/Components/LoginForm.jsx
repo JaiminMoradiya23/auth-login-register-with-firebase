@@ -53,7 +53,6 @@ const LoginForm = () => {
     const handleEmailLogin = async (data) => {
         try {
             await signInWithEmailAndPassword(data.email, data.password);
-            router.push('/');
         } catch (err) {
             throw new Error(err.message);
         }
@@ -70,6 +69,7 @@ const LoginForm = () => {
                     error: (err) => err.message.includes('auth/invalid-credential') ? 'Invalid Credentials' : err.message
                 }
             );
+            router.push('/');
         } catch (error) {
             console.error(error)
         } finally {
@@ -91,7 +91,7 @@ const LoginForm = () => {
 
     return (
         <>
-            <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">Welcome Back</h2>
+            <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">Welcome</h2>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 {formFields.map((field) => (
                     <div key={field.name}>

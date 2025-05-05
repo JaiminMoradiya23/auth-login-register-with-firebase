@@ -1,10 +1,9 @@
 'use client'
 import React, { useState } from 'react'
 import Image from 'next/image';
-import GoogleLogo from "@/assetes/svg/GoogleLogo.svg";
+import GoogleLogo from "@/assets/svg/GoogleLogo.svg";
 import { signInWithGoogle } from '@/firebase/auth';
 import { useRouter } from 'next/navigation';
-import { getAuth } from 'firebase/auth';
 import toast from 'react-hot-toast';
 
 const LoginMethods = () => {
@@ -22,7 +21,6 @@ const LoginMethods = () => {
                     error: (err) => err.message
                 }
             );
-            const user = getAuth().currentUser;
             router.push('/');
         } catch (error) {
             console.error(error);

@@ -30,6 +30,6 @@ export const signOutWithGoogle = async () => {
 };
 
 // Email/Password
-export const signUpWithEmailAndPassword = (email, username, password) => createUserWithEmailAndPassword(auth, email, password, username);
+export const signUpWithEmailAndPassword = (email, password) => createUserWithEmailAndPassword(auth, email, password);
 
 export const signInWithEmailAndPassword = (email, password) => signInWithEmailAndPasswordFirebase(auth, email, password);
