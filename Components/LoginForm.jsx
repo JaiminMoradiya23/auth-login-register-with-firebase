@@ -1,12 +1,11 @@
 'use client'
 import React, { useState } from 'react'
 import { useForm } from "react-hook-form"
-import { User, Mail, Lock, Eye, EyeOff } from 'lucide-react'
+import { Mail, Lock, Eye, EyeOff } from 'lucide-react'
 import { signInWithEmailAndPassword } from '@/firebase/auth'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import toast from 'react-hot-toast'
-import { toastStyle } from '../utilities/helpers'
 
 const LoginForm = () => {
     const [showPassword, setShowPassword] = useState(false)

@@ -5,7 +5,6 @@ import { Mail, Lock, Eye, EyeOff } from 'lucide-react'
 import { signUpWithEmailAndPassword } from '@/firebase/auth'
 import Link from 'next/link'
 import toast from 'react-hot-toast'
-import { auth } from '@/firebase/firebaseClient'
 import { useRouter } from 'next/navigation'
 
 const SignupForm = () => {
@@ -71,7 +70,7 @@ const SignupForm = () => {
                     success: "Successfully signed up!",
                     error: (err) => err.message.includes('auth/email-already-in-use') ? "Email is already in use" : err.message
                 }
-            ); 
+            );
             router.push("/")
         } catch (err) {
             console.error(err)

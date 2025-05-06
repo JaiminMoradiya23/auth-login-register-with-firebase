@@ -1,6 +1,6 @@
-import Header from "./Components/Header";
-import HomeComp from "./Components/Home";
-import ProtectedRoute from "./Components/ProtectedRoute";
+import Header from "@/Components/Header";
+import HomeComp from "@/Components/Home";
+import ProtectedRoute from "@/Components/ProtectedRoute";
 
 export default function Home() {
 

@@ -1,7 +1,7 @@
 import React from 'react'
-import SignupForm from '../Components/SignupForm'
-import AuthRoute from '../Components/AuthRoute'
-import LoginMethods from '../Components/LoginMethods'
+import SignupForm from '@/Components/SignupForm'
+import AuthRoute from '@/Components/AuthRoute'
+import LoginMethods from '@/Components/LoginMethods'
 
 const Signup = () => {
     return (

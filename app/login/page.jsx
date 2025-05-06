@@ -1,7 +1,7 @@
 import React from 'react'
-import LoginForm from '../Components/LoginForm'
-import LoginMethods from '../Components/LoginMethods'
-import AuthRoute from '../Components/AuthRoute'
+import LoginForm from '@/Components/LoginForm'
+import LoginMethods from '@/Components/LoginMethods'
+import AuthRoute from '@/Components/AuthRoute'
 
 const Login = () => {
     return (
